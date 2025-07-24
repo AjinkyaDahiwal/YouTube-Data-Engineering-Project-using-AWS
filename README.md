@@ -24,6 +24,8 @@ Here's where my smart automation kicks in. I built a Lambda function that automa
 
 Lambda Function :
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/6ff2c3ab4e49289462a27c75eeacbf65f8e20241/Youtube-data-pipeline/Screenshots/Gallery_1753373157502.png)
+Changes in environmental variables as per code : 
+![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/7992684a871c004d05987d1ee5b6cede0c1e86ac/Youtube-data-pipeline/Screenshots/Gallery_1753373112395.png)
 
 Trigger for it :
 ![Image Alt](image_url)
