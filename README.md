@@ -17,8 +17,17 @@ I designed my data lake with three separate S3 buckets, each serving a specific 
 Layer 1 - Raw Data Bucket (de-on-youtube-raw-useast1-dev)
 This is where I first uploaded all the original files from Kaggle. I kept everything exactly as I downloaded it from my desktop. I wanted to preserve the original data in case I needed to reprocess it differently later. Having this raw layer means I can always go back to the source if something goes wrong in my transformations. I organized the CSV files using region-based folders (like region=ca/, region=us/) to make them easier to work with later.
 
+
+
 Layer 2 - Transformed Data Bucket (de-on-youtube-transformed-useast1-dev)
 Here's where my smart automation kicks in. I built a Lambda function that automatically watches the raw bucket. Whenever I upload a JSON file (those category mapping files), the Lambda function immediately converts it from JSON to Parquet format. I did this because Parquet files are much smaller and way faster to read than JSON files. The Lambda function also extracts the important "items" data from the nested JSON structure and saves it in a clean, organized way. This happens automatically without me having to manually convert each file.
+
+Lambda Function :
+![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/6ff2c3ab4e49289462a27c75eeacbf65f8e20241/Youtube-data-pipeline/Screenshots/Gallery_1753373157502.png)
+
+Trigger for it :
+![Image Alt](image_url)
+
 
 Layer 3 - Analytics Data Bucket (de-on-youtube-analytics-useast1-dev)
 This is my final, business-ready data. Here I used a powerful PySpark job that combines the video statistics with the category information. I also filtered the data to focus only on Canada, Great Britain, and United States since those were the markets my hypothetical client cared about. The job fixes data type mismatches, removes incomplete records, and creates perfectly partitioned tables that analysts can query super fast. It's like having a final, polished dataset ready for any business question.
