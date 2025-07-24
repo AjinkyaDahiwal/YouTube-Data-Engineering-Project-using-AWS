@@ -28,7 +28,7 @@ Changes in environmental variables as per code :
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/7992684a871c004d05987d1ee5b6cede0c1e86ac/Youtube-data-pipeline/Screenshots/Gallery_1753373112395.png)
 
 Trigger for it :
-![Image Alt](image_url)
+![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/d36921820b8bd08a5b71aead6e110b2cbdc6b5fd/Youtube-data-pipeline/Screenshots/Gallery_1753373074678.png)
 
 
 Layer 3 - Analytics Data Bucket (de-on-youtube-analytics-useast1-dev)
