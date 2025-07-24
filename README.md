@@ -37,6 +37,11 @@ Trigger for it :
 Layer 3 - Analytics Data Bucket (de-on-youtube-analytics-useast1-dev)
 This is my final, business-ready data. Here I used a powerful PySpark job that combines the video statistics with the category information. I also filtered the data to focus only on Canada, Great Britain, and United States since those were the markets my hypothetical client cared about. The job fixes data type mismatches, removes incomplete records, and creates perfectly partitioned tables that analysts can query super fast. It's like having a final, polished dataset ready for any business question.
 
+![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/681516f34560a5fc6eac8e87fc93498f5c45af0d/Youtube-data-pipeline/Screenshots/Gallery_1753372967417.png)
+![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/681516f34560a5fc6eac8e87fc93498f5c45af0d/Youtube-data-pipeline/Screenshots/Gallery_1753372991735.png)
+![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/681516f34560a5fc6eac8e87fc93498f5c45af0d/Youtube-data-pipeline/Screenshots/Gallery_1753373047695.png)
+![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/681516f34560a5fc6eac8e87fc93498f5c45af0d/Youtube-data-pipeline/Screenshots/Gallery_1753373264927.png)
+
 Technologies I Used
 Amazon S3: Cloud storage for all my data files across three buckets
 
