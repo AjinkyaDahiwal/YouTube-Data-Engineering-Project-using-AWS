@@ -50,18 +50,15 @@ This is my final, business-ready data. Here I used a powerful PySpark job that c
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/681516f34560a5fc6eac8e87fc93498f5c45af0d/Youtube-data-pipeline/Screenshots/Gallery_1753372967417.png)
 
 
-Technologies I Used
-Amazon S3: Cloud storage for all my data files across three buckets
-
-AWS Glue Crawler: Automatically scans my data and builds a searchable catalog
-
-AWS Lambda: Runs my JSON conversion code instantly when files are uploaded
-
-AWS Glue ETL: Heavy-duty data processing using PySpark for complex transformations
-
-Amazon Athena: Lets me and others query the data using regular SQL
+### Technologies I Used :
 
 AWS CLI: Command-line tools for uploading data and automation
+Amazon S3: Cloud storage for all my data files across three buckets
+AWS Glue Crawler: Automatically scans my data and builds a searchable catalog
+AWS Lambda: Runs my JSON conversion code instantly when files are uploaded
+AWS Glue ETL: Heavy-duty data processing using PySpark for complex transformations
+Amazon Athena: Lets me and others query the data using regular SQL
+
 
 ### How My Pipeline Works Step by Step
 Step 1: Organized Data Upload
