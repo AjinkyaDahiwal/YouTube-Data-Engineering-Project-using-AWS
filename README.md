@@ -42,6 +42,7 @@ Quering on athena on transformed dataset:
 Importance of 3rd bucket:
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/681516f34560a5fc6eac8e87fc93498f5c45af0d/Youtube-data-pipeline/Screenshots/Gallery_1753372991735.png)
 
+Glue Job : 
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/681516f34560a5fc6eac8e87fc93498f5c45af0d/Youtube-data-pipeline/Screenshots/Gallery_1753373047695.png)
 
 Dashboard which we can make on quicksight: 
