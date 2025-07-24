@@ -1,0 +1,10 @@
+SELECT 
+    region,
+    category_name,
+    AVG(views) as avg_views,
+    AVG(likes) as avg_likes,
+    COUNT(*) as video_count
+FROM youtube_analytics.final_videos 
+WHERE trending_date >= '2023-01-01'
+GROUP BY region, category_name
+ORDER BY avg_views DESC;
