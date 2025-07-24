@@ -99,7 +99,7 @@ Performance Benchmarking: "How do our video metrics compare to trending content?
 
 # Since this is a learning project so :
 I Stopped all services after project completion to prevent ongoing costs.
-Set up Lambda with appropriate memory settings to avoid over-provisioning
+
 
 
 
