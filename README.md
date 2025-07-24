@@ -17,10 +17,7 @@ I designed my data lake with three separate S3 buckets, each serving a specific 
 Layer 1 - Raw Data Bucket (de-on-youtube-raw-useast1-dev)
 This is where I first uploaded all the original files from Kaggle. I kept everything exactly as I downloaded it from my desktop. I wanted to preserve the original data in case I needed to reprocess it differently later. Having this raw layer means I can always go back to the source if something goes wrong in my transformations. I organized the CSV files using region-based folders (like region=ca/, region=us/) to make them easier to work with later.
 
-# h1 First Bucket Creation: 
-## h2 First Bucket Creation: 
-### h3 First Bucket Creation: 
-##### h4 First Bucket Creation: 
+##### First Bucket Creation: 
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/9cc3c42ba0e31653dc90dfb98397e7d6646d487c/Youtube-data-pipeline/Screenshots/Gallery_1753372930871.png)
 
 
@@ -28,27 +25,27 @@ This is where I first uploaded all the original files from Kaggle. I kept everyt
 Layer 2 - Transformed Data Bucket (de-on-youtube-transformed-useast1-dev)
 Here's where my smart automation kicks in. I built a Lambda function that automatically watches the raw bucket. Whenever I upload a JSON file (those category mapping files), the Lambda function immediately converts it from JSON to Parquet format. I did this because Parquet files are much smaller and way faster to read than JSON files. The Lambda function also extracts the important "items" data from the nested JSON structure and saves it in a clean, organized way. This happens automatically without me having to manually convert each file.
 
-Lambda Function :
+#####  Lambda Function :
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/6ff2c3ab4e49289462a27c75eeacbf65f8e20241/Youtube-data-pipeline/Screenshots/Gallery_1753373157502.png)
-Changes in environmental variables as per code : 
+#####  Changes in environmental variables as per code : 
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/7992684a871c004d05987d1ee5b6cede0c1e86ac/Youtube-data-pipeline/Screenshots/Gallery_1753373112395.png)
 
-Trigger for it :
+##### Trigger for it :
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/d36921820b8bd08a5b71aead6e110b2cbdc6b5fd/Youtube-data-pipeline/Screenshots/Gallery_1753373074678.png)
 
 
 Layer 3 - Analytics Data Bucket (de-on-youtube-analytics-useast1-dev)
 This is my final, business-ready data. Here I used a powerful PySpark job that combines the video statistics with the category information. I also filtered the data to focus only on Canada, Great Britain, and United States since those were the markets my hypothetical client cared about. The job fixes data type mismatches, removes incomplete records, and creates perfectly partitioned tables that analysts can query super fast. It's like having a final, polished dataset ready for any business question.
-Quering on athena on transformed dataset:
+#####  Quering on athena on transformed dataset:
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/681516f34560a5fc6eac8e87fc93498f5c45af0d/Youtube-data-pipeline/Screenshots/Gallery_1753373264927.png)
 
-Importance of 3rd bucket:
+#####  Importance of making it more efficient:
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/681516f34560a5fc6eac8e87fc93498f5c45af0d/Youtube-data-pipeline/Screenshots/Gallery_1753372991735.png)
 
-Glue Job : 
+##### Glue Job : 
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/681516f34560a5fc6eac8e87fc93498f5c45af0d/Youtube-data-pipeline/Screenshots/Gallery_1753373047695.png)
 
-Dashboard which we can make on quicksight: 
+##### Dashboard which we can make on quicksight: 
 ![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/681516f34560a5fc6eac8e87fc93498f5c45af0d/Youtube-data-pipeline/Screenshots/Gallery_1753372967417.png)
 
 
@@ -65,7 +62,7 @@ Amazon Athena: Lets me and others query the data using regular SQL
 
 AWS CLI: Command-line tools for uploading data and automation
 
-How My Pipeline Works Step by Step
+### How My Pipeline Works Step by Step
 Step 1: Organized Data Upload
 I used AWS CLI commands to upload my Kaggle dataset in a smart way. All JSON category files went to a reference data folder, and each country's CSV file went to its own region folder. This organization makes everything downstream work smoothly.
 
