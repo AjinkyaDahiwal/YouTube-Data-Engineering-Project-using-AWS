@@ -17,6 +17,9 @@ I designed my data lake with three separate S3 buckets, each serving a specific 
 Layer 1 - Raw Data Bucket (de-on-youtube-raw-useast1-dev)
 This is where I first uploaded all the original files from Kaggle. I kept everything exactly as I downloaded it from my desktop. I wanted to preserve the original data in case I needed to reprocess it differently later. Having this raw layer means I can always go back to the source if something goes wrong in my transformations. I organized the CSV files using region-based folders (like region=ca/, region=us/) to make them easier to work with later.
 
+First Bucket Creation: 
+![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/9cc3c42ba0e31653dc90dfb98397e7d6646d487c/Youtube-data-pipeline/Screenshots/Gallery_1753372930871.png)
+
 
 
 Layer 2 - Transformed Data Bucket (de-on-youtube-transformed-useast1-dev)
