@@ -9,6 +9,8 @@ I downloaded the "Trending YouTube Video Statistics" dataset from Kaggle. This d
 Link: https://www.kaggle.com/datasets/datasnaek/youtube-new
 
 # Architecture : 
+![Image Alt](https://github.com/AjinkyaDahiwal/YouTube-Data-Engineering-Project-using-AWS/blob/3645ad3fcb0d0e7d8f2341f8b0c76b3f0b87a0f3/Youtube-data-pipeline/architecture/Architecture%20Diagram%20Final.png)
+
 
 # My Three-Layer Data Storage Strategy
 I designed my data lake with three separate S3 buckets, each serving a specific purpose:
